@@ -7,8 +7,8 @@ import { Injectable } from '@angular/core';
 export class ApiService {
 
   constructor(private http:HttpClient) { }
-  addBook=()=>
+  addBook=(data:any)=>
   {
-    return this.http.post()
+    return this.http.post("http://localhost:8081/add",data)
   }
 }
