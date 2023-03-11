@@ -1,0 +1,38 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+            <div class="row g-3 m-4">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+                    <label for="" class="form-label">Title</label>
+                    <input name="title" [(ngModel)]="title" type="text" class="form-control">
+
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+                    <button (click)="searchData()" class="btn btn-success">Search</button>
+
+                </div>
+            </div>
+            <div class="row g-3 m-4">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" *ngFor="let i of searchVal">
+
+                    <div class="card" style="width: 18rem;">
+                        <img src="{{i.image}}" height="200rem" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Title: {{i.title}}</h5>
+                          <p class="card-text">Author: {{i.author}}</p>
+                          <a href="#" class="btn btn-primary">Buy Now</a>
+                        </div>
+                      </div>
+                    
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
