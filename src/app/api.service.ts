@@ -9,6 +9,6 @@ export class ApiService {
   constructor(private http:HttpClient) { }
   addBook=(data:any)=>
   {
-    return this.http.post("http://localhost:8081/add",data)
+    return this.http.post("http://localhost:8080/addBook",data)
   }
 }
